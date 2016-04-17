@@ -1,5 +1,5 @@
 # PESL
-Simple website for Pe Sound and Light
+Simple website for [PE Sound and Light](http://www.pesoundandlight.co.uk)
 
 Uses [Start Bootstrap theme - Styelish portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/) as a base.
 
