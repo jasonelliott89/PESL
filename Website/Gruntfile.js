@@ -84,8 +84,8 @@ module.exports = function(grunt) {
 				'clean:build', // clean build folder
 				'includereplace:dist', // compile website from partial views and pages
 				'copy', // copy website from tmp folder and move to build
-				'concat', // concat js files
-				'concat_css', // concat css files
+				'concat', // concat js files and add to build folder
+				'concat_css', // concat css files and add to build folder
 				'clean:tmp' // clean up tmp directoy
 			]
 		}
