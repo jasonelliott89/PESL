@@ -5,4 +5,7 @@ Uses [Start Bootstrap theme - Styelish portfolio](http://startbootstrap.com/temp
 
 ## Getting started
 Run `npm install` in Website directoy, then build the site using the `grunt build`.
-This will start a connect server at localhost:1234
+
+##Or
+
+Run `npm install` in Website directoy, then build the site using the `grunt build` and finaly serve it with `grunt` cmd.
