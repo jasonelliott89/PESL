@@ -1,0 +1,72 @@
+.mw--100 {
+    max-width: 100%;
+}
+.mw--30 {
+    max-width: 30%;
+}
+@media ( max-width:768px ) {
+    .img-portfolio {
+        /*max-height: 120px*/
+    }
+}
+
+#about {
+    background: url(../img/callout.jpg) no-repeat center center scroll;
+}
+
+.bg-grey {
+    background-color: #e3e3e3;
+}
+
+.hr-alt {
+    border-color: #333333;
+}
+
+.work-header {
+    height: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.portfolio-item-info .img-portfolio {
+    margin-bottom: 0px;
+}
+
+.portfolio-item-info {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-item-button {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;
+    color: #ffffff;
+    transition: bottom 0.2s ease-in-out;    
+}
+.portfolio-item-button:hover,
+.portfolio-item-button:active,
+.portfolio-item-button:focus {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.9);
+}
+.portfolio-item-info.active .portfolio-item-button {
+    bottom: -50px
+}
+
+.portfolio-item-content {
+    color: #ffffff;
+    background-color: rgba(0,0,0, 0.7);
+    position: absolute;
+    bottom: -200px;
+    padding: 10px;
+    transition: bottom 0.5s ease-in-out;
+}
+.portfolio-item-info.active .portfolio-item-content {
+    bottom: 0;
+}
