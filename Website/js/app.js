@@ -3,7 +3,7 @@
     $(function() {
 
         // Closes the sidebar menu
-        $("#menu-close").on('click', function(e) {
+        $("#menu-close, .menu-item").on('click', function(e) {
             e.preventDefault();
             $("#sidebar-wrapper").toggleClass("active");
         });
@@ -39,8 +39,13 @@
             var $els = $('.portfolio-item-info')
                 $el = $(e.currentTarget);
 
-            $els.removeClass('active');
-            $el.addClass("active");
+            if ( $el.hasClass('active') ) {
+                $els.removeClass('active');
+            } else {
+                $els.removeClass('active');
+                $el.addClass("active");
+            }
+
 
         });
         

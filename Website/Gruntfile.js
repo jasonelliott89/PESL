@@ -78,6 +78,29 @@ module.exports = function(grunt) {
 			tmp: ['tmp']
 		},
 
+		cssmin: {
+			target: {
+				files: [{
+					expand: true,
+					cwd: 'build/assets/css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'build/assets/css',
+					ext: '.min.css'
+				}]
+			}
+		},
+
+		uglify: {
+			options: {
+				mangle: false
+			},
+			my_target: {
+				files: {
+					'build/assets/js/all.min.js': ['build/assets/js/all.js']
+				}
+			}
+		},
+
 		watch: {
 			files: ['source/**/*.html', 'css/**/*.css', 'js/**/*.js', 'img/**/*'],
 			tasks: [
@@ -86,7 +109,9 @@ module.exports = function(grunt) {
 				'copy', // copy website from tmp folder and move to build
 				'concat', // concat js files and add to build folder
 				'concat_css', // concat css files and add to build folder
-				'clean:tmp' // clean up tmp directoy
+				'clean:tmp', // clean up tmp directoy
+				'cssmin', // minify css in build folder
+				'uglify' // Uglify js
 			]
 		}
 
@@ -98,7 +123,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-concat-css');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-notify');
 
 	grunt.registerTask('default', ['connect', 'watch']);

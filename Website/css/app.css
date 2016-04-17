@@ -41,7 +41,6 @@
 .portfolio-item-button {
     display: block;
     position: absolute;
-    font-size: 2em;
     width: 100%;
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
