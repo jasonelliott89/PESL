@@ -129,6 +129,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 
 	grunt.registerTask('default', ['connect', 'watch']);
+	grunt.registerTask('build', ['clean:build','includereplace:dist','copy','concat','concat_css','clean:tmp','cssmin','uglify']);
 	grunt.task.run('notify_hooks');
 
 };
